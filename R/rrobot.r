@@ -4,11 +4,13 @@
 #'
 #'@section base methods:
 #'
-#'      \code{\link{init}}
+#'      \code{\link{init}} - initialize a new worklist
 #'
-#'      \code{\link{write.gwl}}
+#'      \code{\link{write.gwl}} - write worklist
 #'
-#'      \code{\link{addToWorktable}}
+#'      \code{\link{addToWorktable}} - add labware to worktable
+#' 
+#'      \code{\link{addToWorklist}} - add an arbitrary command
 #'
 #'@section Basic Worklist methods:
 #'      
@@ -37,14 +39,20 @@
 #'      \code{\link{adv_mix}}
 #' 
 #'      \code{\link{moveLiHa}}
+#' 
+#'      \code{\link{moveMCA}}
+#' 
+#'      \code{\link{MCAvector}}
+#' 
+#'      \code{\link{MCArelative}}
 #'
 #'      \code{\link{startTimer}}
 #'
 #'      \code{\link{waitTimer}}
 #'
 #'      \code{\link{sterile_wash}}
-#'
-#'      \code{\link{addToWorklist}}
+#' 
+#'      \code{\link{fwCommand}}
 #'
 #'@section Worklist check methods:
 #' 
