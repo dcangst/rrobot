@@ -1,7 +1,11 @@
-# rrobot - Useful R functions for the Tecan Freedom Evo
+# rrobot - Useful R functions for Tecan Freedom Evo Liquid Handling Platforms
 
-functions for generating worklists and reading data from reader.
-See [CHANGELOG](CHANGELOG.md) for recent changes.
+functions for generating worklists and reading data from reader. It is geared toward the setup we have 
+in the (Theoretical Biology Group)[www.tb.ethz.ch] at ETH Zürich but might be useful, or at least a
+starting point for others, so here goes.
+
+Obviously, use at your own risk. Make sure you know what the commmands do (they usually correspond to a single 
+Basic or advanced worklist command that you can find in the EvoWare Documentation.)
 
 ## Installation
 
@@ -42,9 +46,10 @@ to install directly from git:
 
 ## Usage
 
-First, initialize defaults and worklist:
+First, load package and initialize defaults and worklist:
 
 ```R
+    library(rrobot)
     init()
     gwl #displays the initialized worklist & worktable
 ```
@@ -53,7 +58,7 @@ First, initialize defaults and worklist:
 
 After that you can use the commands provided. Every command adds a row to `gwl$worklist`. See `?rrobot`, or use `?` in general, for details about the commands available, or check the source and implement more! Obviously all commands can be looped etc.
 
-General worklist commands (i.e. pipetting, movements etc.) are located in [gwlFunctions.R](R/gwlFunctions.R) (Tecan Basic Worklist) and [advGWLFunctions.R](R/advGWLFunctions.R). [accFunctions.R](R/accFunctions.R) contains, surprise, accessory functions used in other methods.
+all commands have a some helpful information, use e.g. `?adv_aspirate`. `?rrobot` lists the most useful commands.
 
 When finished with assembling your worklist use `write.gwl(gwl)` to write the worklist to the current working directory using the filename specified in `init`.
 
