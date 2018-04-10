@@ -18,3 +18,4 @@ tip & volumen masks from wells and volumes
 Other general: \code{\link{rc_to_well}},
   \code{\link{read_storex}}, \code{\link{shortestPath}}
 }
+\concept{general}

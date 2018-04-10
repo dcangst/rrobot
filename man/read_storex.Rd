@@ -16,3 +16,4 @@ Reads storex pos list to data.frame
 Other general: \code{\link{generateMasks}},
   \code{\link{rc_to_well}}, \code{\link{shortestPath}}
 }
+\concept{general}

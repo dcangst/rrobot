@@ -36,3 +36,4 @@ Other advanced worklist procedures: \code{\link{evowait}},
   \code{\link{sterile_wash_phage}},
   \code{\link{sterile_wash}}, \code{\link{washPinTool}}
 }
+\concept{advanced worklist procedures}

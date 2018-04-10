@@ -13,9 +13,10 @@ gwl_df_part(type = as.character(NA), command = as.character(NA),
   arm = as.character(NA))
 }
 \description{
-fhelper function to create a dataframe of a gwl line
+helper function to create a dataframe of a gwl line
 }
 \seealso{
 Other gwl_check: \code{\link{read_gwl_df}},
   \code{\link{read_gwl}}
 }
+\concept{gwl_check}

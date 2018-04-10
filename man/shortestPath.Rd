@@ -18,3 +18,4 @@ using the TSP package
 Other general: \code{\link{generateMasks}},
   \code{\link{rc_to_well}}, \code{\link{read_storex}}
 }
+\concept{general}

@@ -25,3 +25,4 @@ generate pretty html report
 Other gwl check: \code{\link{gwlToDataFrame}},
   \code{\link{gwlToTable}}
 }
+\concept{gwl check}

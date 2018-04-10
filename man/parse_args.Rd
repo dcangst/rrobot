@@ -14,3 +14,4 @@ parse_args(arg_names, arg_types = NULL)
 \description{
 takes arguments to R script, parse them and pretty prints their values for log
 }
+\concept{accessory}

@@ -10,10 +10,10 @@ adv_aspirate(tipMask = c(1, 0, 0, 0, 0, 0, 0, 0),
   loopName = "", action = 0, difference = 0, arm = 0)
 }
 \arguments{
-\item{tipMask}{\code{vector("integer",8L)}  containing 0, 1 indicating
+\item{tipMask}{\code{vector("integer",8L)} containing 0, 1 indicating
 selected tips (e.g. \code{c(1,0,1,0,0,0,0,0)} = pins 1 + 3)}
 
-\item{liquidClass}{string1 liquid class name}
+\item{liquidClass}{string, liquid class name}
 
 \item{volumes}{\code{vector("integer",8L)} 8 integers which specify the
 volume in µl for each tip. Specify 0 for tips which are not used or
@@ -58,3 +58,4 @@ Other advanced worklist commands: \code{\link{MCArelative}},
   \code{\link{moveLiHa}}, \code{\link{moveMCA}},
   \code{\link{startTimer}}, \code{\link{waitTimer}}
 }
+\concept{advanced worklist commands}

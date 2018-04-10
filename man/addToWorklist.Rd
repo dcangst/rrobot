@@ -9,7 +9,7 @@ addToWorklist(command, mode, CMadd_warning = "")
 \arguments{
 \item{command}{character, or vector of characters. ” must be escaped (\")}
 
-\item{mode}{one of "basic", "advanced", specifying wheter it is a basic or an
+\item{mode}{one of "basic", "advanced", specifying whether it is a basic or an
 advanced worklist command.}
 
 \item{CMadd_warning}{passed to the worklist, Info only.}
@@ -21,3 +21,4 @@ adds a command to the worklist
 Other general methods: \code{\link{addToWorktable}},
   \code{\link{init}}, \code{\link{write.gwl}}
 }
+\concept{general methods}

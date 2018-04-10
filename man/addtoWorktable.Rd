@@ -32,3 +32,4 @@ adds the labware to a worktable file to keep track of used labware
 Other general methods: \code{\link{addToWorklist}},
   \code{\link{init}}, \code{\link{write.gwl}}
 }
+\concept{general methods}

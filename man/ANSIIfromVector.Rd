@@ -18,3 +18,4 @@ generates ANSII letter from a vector with numbers 1 to 7 indicating which well i
 Other accessory functions: \code{\link{ANSIIFromWells}},
   \code{\link{wellsFromANSII}}
 }
+\concept{accessory functions}

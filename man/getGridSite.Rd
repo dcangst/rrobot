@@ -19,3 +19,4 @@ Other internal: \code{\link{.advVolumeString}},
   \code{\link{.decToBin}}, \code{\link{.listToDf}},
   \code{\link{.updateVolume}}
 }
+\concept{internal}

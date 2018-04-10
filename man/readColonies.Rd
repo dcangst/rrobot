@@ -34,3 +34,4 @@ Defaults should work for 384 Well plate
 \seealso{
 Other pickolo methods: \code{\link{plotColonies}}
 }
+\concept{pickolo methods}

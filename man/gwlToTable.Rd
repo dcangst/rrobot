@@ -26,3 +26,4 @@ generate pretty tables
 Other gwl check: \code{\link{gwlToDataFrame}},
   \code{\link{gwlToHTML}}
 }
+\concept{gwl check}

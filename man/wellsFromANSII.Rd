@@ -17,3 +17,4 @@ calculates the selected wells from the ANSII string (The position starts with
 Other accessory functions: \code{\link{ANSIIFromWells}},
   \code{\link{ANSIIfromVector}}
 }
+\concept{accessory functions}

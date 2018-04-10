@@ -15,3 +15,4 @@ Other basic worklist commands: \code{\link{aspirate}},
   \code{\link{gwl_comment}}, \code{\link{gwl_flush}},
   \code{\link{wash}}
 }
+\concept{basic worklist commands}

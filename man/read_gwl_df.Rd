@@ -23,3 +23,4 @@ read in gwl file, and covert to data_frame
 Other gwl_check: \code{\link{gwl_df_part}},
   \code{\link{read_gwl}}
 }
+\concept{gwl_check}

@@ -22,3 +22,4 @@ well number from row and column
 Other general: \code{\link{generateMasks}},
   \code{\link{read_storex}}, \code{\link{shortestPath}}
 }
+\concept{general}

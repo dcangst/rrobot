@@ -66,3 +66,4 @@ Other advanced worklist commands: \code{\link{MCArelative}},
   \code{\link{moveMCA}}, \code{\link{startTimer}},
   \code{\link{waitTimer}}
 }
+\concept{advanced worklist commands}

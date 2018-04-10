@@ -24,3 +24,4 @@ Plot identified colonies over image from pickolo
 \seealso{
 Other pickolo methods: \code{\link{readColonies}}
 }
+\concept{pickolo methods}

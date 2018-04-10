@@ -29,3 +29,4 @@ Other advanced worklist procedures: \code{\link{evowait}},
   \code{\link{sterile_wash}}, \code{\link{tiptouch}},
   \code{\link{washPinTool}}
 }
+\concept{advanced worklist procedures}

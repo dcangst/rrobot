@@ -21,3 +21,4 @@ calculates string for well selection in advanced worklist commands
 Other accessory functions: \code{\link{ANSIIfromVector}},
   \code{\link{wellsFromANSII}}
 }
+\concept{accessory functions}

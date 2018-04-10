@@ -22,3 +22,4 @@ no description
 \seealso{
 Other hospital_experiment: \code{\link{binToInt}}
 }
+\concept{hospital_experiment}

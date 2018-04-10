@@ -23,3 +23,4 @@ writes worklist to file, filename defined in \code{init}.
 Other general methods: \code{\link{addToWorklist}},
   \code{\link{addToWorktable}}, \code{\link{init}}
 }
+\concept{general methods}
