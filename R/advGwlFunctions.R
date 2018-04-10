@@ -1,8 +1,8 @@
 #' Advanced Aspirate Command
 #'
-#' @param tipMask \code{vector("integer",8L)}  containing 0, 1 indicating
+#' @param tipMask \code{vector("integer",8L)} containing 0, 1 indicating
 #'      selected tips (e.g. \code{c(1,0,1,0,0,0,0,0)} = pins 1 + 3)
-#' @param liquidClass string1 liquid class name
+#' @param liquidClass string, liquid class name
 #' @param volumes \code{vector("integer",8L)} 8 integers which specify the
 #'       volume in µl for each tip. Specify 0 for tips which are not used or
 #'       not fitted.

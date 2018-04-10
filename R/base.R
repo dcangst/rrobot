@@ -1,3 +1,108 @@
+#'Initialize Worklist & set defaults
+#'
+#'Initialization. Generates object \code{gwl} in \code{.GlobalEnv}
+#'
+#'@param filename string, the name of the generated worklist and worktable
+#'  (+ "_worktable.txt")
+#'@param RackLabel Max. 32 characters User-defined label (name) which is
+#'  assigned to the labware.
+#'@param RackID Max. 32 characters, Labware barcode.
+#'@param RackType Max. 32 characters, Labware type (configuration name),
+#'  e.g. “384 Well, landscape”.
+#'@param Position 1 .. number of wells, Well position in the labware. The
+#'  position starts with 1 and increases from rear to front and left to right.
+#'@param TubeID Max. 32 characters, Tube barcode.
+#'@param Volume 0 .. +7158278, Pipetting volume in µl.
+#'@param LiquidClass Max. 32 characters, This optional parameter overwrites the
+#'  liquid class specified in the Worklist command.
+#'@param TipMask 1 .. 128, This optional parameter specifies the tip you want
+#'  to use. The tip number is bit-coded, i.e. Tip 1 = 1, Tip 2 = 2,
+#'  Tip 3 = 4; Tip 4 = 8 and so on. Please note that you can only use a tip
+#'  which has been enabled with Tip Selection in the Worklist command.
+#'  If you do not specify TipMask, Freedom EVOware uses one of the tips
+#'  specified with Tip Selection in the Worklist command.
+#'@param ForcedRackType Max. 32 characters, This optional parameter is the
+#'  configuration name of the labware. If specified, it is used instead
+#'  of the labware type which is found on the Freedom EVOware worktable.
+#'@param MinDetectedVolume 0 .. +7158278 Liquid volume in µl. If this optional
+#'  parameter is specified and Liquid Level Detection is enabled in the
+#'  selected liquid class, it is used by the LiHa to determine the minimum
+#'  liquid height which must be available in the well. Otherwise a liquid
+#'  detection error (not enough liquid) will be triggered. MinDetectedVolume
+#'  specifies the usable volume of liquid. If the aspiration position in the
+#'  liquid class specifies tip immersion (tip submerging), the actual liquid
+#'  height in the well must be higher to allow immersion (i.e. the volume of
+#'  liquid in the well must be more than MinDetectedVolume).
+#'@param Wash Default wash step to use
+#'@param WTtemplate character, data.frame or NULL. character: worktable
+#'  template to load ("basic" only atm), data.frame: a worktable layout as a
+#'  data.frame, NULL: an empty worktable.
+#'@section Output:
+#'   invisible(gwl), also saves object \code{gwl} to \code{.GlobalEnv}
+#'@family general methods
+#'@export
+init <- function(
+  filename = paste0(format(Sys.time(), "%y%m%d"), "_gwl"),
+  RackLabel = "trough200_1_frt",
+  RackID = "",
+  RackType = "",
+  Position = 0,
+  TubeID = "",
+  Volume = 0,
+  LiquidClass = "",
+  TipMask = 0,
+  ForcedRackType = "",
+  MinDetectedVolume = "",
+  Wash = "W",
+  WTtemplate = "basic") {
+
+  gwl_defaults <- data.frame(
+    filename           = filename,
+    RackLabel          = RackLabel,
+    RackID             = RackID,
+    RackType           = RackType,
+    Position           = Position,
+    TubeID             = TubeID,
+    Volume             = Volume,
+    LiquidClass        = LiquidClass,
+    TipType            = "",
+    TipMask            = TipMask,
+    ForcedRackType     = TipMask,
+    MinDetectedVolume  = MinDetectedVolume,
+    Wash               = Wash,
+    stringsAsFactors = FALSE)
+
+    gwl_worklist  <- data.frame(
+        line = 1,
+        command = paste0("C;INIT - gwl created with rrobot v.",
+          packageVersion("rrobot")),
+        mode = "basic",
+        warning = "",
+        stringsAsFactors = FALSE
+        )
+    gwl_worktable <- data.frame(
+        RackLabel = "INIT",
+        RackType = "",
+        grid = 99,
+        site = 99,
+        Volume = 0,
+        LiquidClass = "none",
+        stringsAsFactors = FALSE
+        )
+    if (is.data.frame(WTtemplate)){
+      gwl_worktable  <- rbind(gwl_worktable, WTtemplate)
+    } else if (is.character(WTtemplate)){
+      eval(parse(text = paste0("gwl_worktable <- ", WTtemplate)))
+    }
+    gwl <- list(
+        worklist = gwl_worklist,
+        worktable = gwl_worktable,
+        defaults = gwl_defaults
+        )
+    gwl <<- gwl
+    invisible(gwl)
+}
+
 #' Write worklist to file
 #'
 #' writes worklist to file, filename defined in \code{init}.
@@ -96,7 +201,7 @@ addToWorktable <- function(RackLabel = "",
 #'
 #' adds a command to the worklist
 #' @param command character, or vector of characters. ” must be escaped (\")
-#' @param mode one of "basic", "advanced", specifying wheter it is a basic or an
+#' @param mode one of "basic", "advanced", specifying whether it is a basic or an
 #'      advanced worklist command.
 #' @param CMadd_warning passed to the worklist, Info only.
 #' @family general methods

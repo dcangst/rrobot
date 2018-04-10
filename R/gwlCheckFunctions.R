@@ -88,7 +88,7 @@ read_gwl <- function(gwl_path=file.choose(), .progress=TRUE){
 
 #' gwl data_frame part
 #' 
-#' fhelper function to create a dataframe of a gwl line
+#' helper function to create a dataframe of a gwl line
 #'
 #' @family gwl_check
 #' @export
