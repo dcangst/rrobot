@@ -472,7 +472,7 @@ washPinTool <- function(
     zMove = 0,
     zTarget = 2,
     speed = 10)
-  for (i in 1:n_dips){
+  for (i in 1:(n_dips-1)){
     moveMCA(
       RackLabel = reservoirs[1],
       ncol = 12,
@@ -488,6 +488,21 @@ washPinTool <- function(
       zTarget = 2,
       speed = 60)
   }
+  # retract slowly
+  moveMCA(
+    RackLabel = reservoirs[1],
+    ncol = 12,
+    nrow = 8,
+    zMove = 4,
+    zTarget = 3,
+    speed = 60)
+  moveMCA(
+    RackLabel = reservoirs[1],
+    ncol = 12,
+    nrow = 8,
+    zMove = 4,
+    zTarget = 2,
+    speed = 5)
   # blot 2: bleach
   moveMCA(
     RackLabel = blots[2],
