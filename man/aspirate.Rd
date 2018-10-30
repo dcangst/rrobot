@@ -4,11 +4,11 @@
 \alias{aspirate}
 \title{Aspirate Command}
 \usage{
-aspirate(RackLabel = gwl$defaults$RackLabel, RackID = gwl$defaults$RackID,
-  RackType = gwl$defaults$RackType, Position = gwl$defaults$Position,
-  TubeID = gwl$defaults$TubeID, Volume = gwl$defaults$Volume,
-  LiquidClass = gwl$defaults$LiquidClass, TipType = "",
-  TipMask = gwl$defaults$TipMask,
+aspirate(RackLabel = gwl$defaults$RackLabel,
+  RackID = gwl$defaults$RackID, RackType = gwl$defaults$RackType,
+  Position = gwl$defaults$Position, TubeID = gwl$defaults$TubeID,
+  Volume = gwl$defaults$Volume, LiquidClass = gwl$defaults$LiquidClass,
+  TipType = "", TipMask = gwl$defaults$TipMask,
   ForcedRackType = gwl$defaults$ForcedRackType,
   MinDetectedVolume = gwl$defaults$MinDetectedVolume)
 }

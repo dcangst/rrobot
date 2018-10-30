@@ -5,11 +5,11 @@
 \title{Reagent Distribution Command}
 \usage{
 distribute(SrcRackLabel = "", SrcRackID = "", SrcRackType = "",
-  SrcPosStart = "", SrcPosEnd = "", DestRackLabel = "", DestRackID = "",
-  DestRackType = "", DestPosStart = "", DestPosEnd = "",
-  Volume = gwl$defaults$Volume, LiquidClass = gwl$defaults$LiquidClass,
-  NoOfDitiReuses = 1, NoOfMultiDisp = 1, Direction = 0,
-  ExcludeDestWell = NA)
+  SrcPosStart = "", SrcPosEnd = "", DestRackLabel = "",
+  DestRackID = "", DestRackType = "", DestPosStart = "",
+  DestPosEnd = "", Volume = gwl$defaults$Volume,
+  LiquidClass = gwl$defaults$LiquidClass, NoOfDitiReuses = 1,
+  NoOfMultiDisp = 1, Direction = 0, ExcludeDestWell = NA)
 }
 \arguments{
 \item{SrcRackLabel}{Max. 32 characters User-defined label (name) which is assigned to the source labware.}

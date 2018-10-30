@@ -4,8 +4,9 @@
 \alias{washPinTool}
 \title{Wash pin tool}
 \usage{
-washPinTool(t_wait = 2, t_dry = 90, n_dips = 3, reservoirs = c("Bleach",
-  "ddH2O", "Isopropanol"), blots = c("Blot1", "BlotBleach", "BlotH2O"))
+washPinTool(t_wait = 2, t_dry = 90, n_dips = 3,
+  reservoirs = c("Bleach", "ddH2O", "Isopropanol"), blots = c("Blot1",
+  "BlotBleach", "BlotH2O"))
 }
 \arguments{
 \item{t_wait}{integer, time (s) to wait on blotting paper}

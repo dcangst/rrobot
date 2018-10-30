@@ -4,9 +4,9 @@
 \alias{plotColonies}
 \title{Plot Colonies from Pickolo}
 \usage{
-plotColonies(pickoloData, img_path, plotLabels = FALSE, colChange = NULL,
-  line_size = 0.1, title_size = 4, label_size = 0.8, axis_text_size = 5,
-  pars = pickoloData$pars)
+plotColonies(pickoloData, img_path, plotLabels = FALSE,
+  colChange = NULL, line_size = 0.1, title_size = 4,
+  label_size = 0.8, axis_text_size = 5, pars = pickoloData$pars)
 }
 \arguments{
 \item{pickoloData}{List, output of \code{\link{readColonies}}}

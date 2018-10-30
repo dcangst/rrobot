@@ -4,9 +4,9 @@
 \alias{moveMCA}
 \title{MCA Move}
 \usage{
-moveMCA(RackLabel, quadrant = 1, ncol = 24, nrow = 16, zMove, zTarget,
-  offset = 0, speed, noOfLoopOptions = 0, loopName = "", action = 0,
-  difference = 0, arm = 0)
+moveMCA(RackLabel, quadrant = 1, ncol = 24, nrow = 16, zMove,
+  zTarget, offset = 0, speed, noOfLoopOptions = 0, loopName = "",
+  action = 0, difference = 0, arm = 0)
 }
 \arguments{
 \item{RackLabel}{Max. 32 characters User-defined label (name) which is

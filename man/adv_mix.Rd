@@ -5,10 +5,10 @@
 \title{Adv Mix Command}
 \usage{
 adv_mix(tipMask = c(1, 0, 0, 0, 0, 0, 0, 0),
-  liquidClass = gwl$defaults$LiquidClass, volumes = gwl$defaults$Volume,
-  RackLabel, spacing = 2, wellSelection, ncol, nrow, cycles,
-  noOfLoopOptions = 0, loopName = "", action = 0, difference = 0,
-  arm = 0)
+  liquidClass = gwl$defaults$LiquidClass,
+  volumes = gwl$defaults$Volume, RackLabel, spacing = 2, wellSelection,
+  ncol, nrow, cycles, noOfLoopOptions = 0, loopName = "", action = 0,
+  difference = 0, arm = 0)
 }
 \arguments{
 \item{tipMask}{\code{vector("integer",8L)}  containing 0, 1 indicating

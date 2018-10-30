@@ -4,8 +4,9 @@
 \alias{iPTdeactivate}
 \title{iPinTool deactivate pins}
 \usage{
-iPTdeactivate(pins, RackLabel = "iPT tool", readyVector = "PT getReady",
-  pushVector1 = "PT Act 1-192", pushVector2 = "PT Act 193-384")
+iPTdeactivate(pins, RackLabel = "iPT tool",
+  readyVector = "PT getReady", pushVector1 = "PT Act 1-192",
+  pushVector2 = "PT Act 193-384")
 }
 \arguments{
 \item{pins}{vector of integers 1:384, designating the pins to be deactivated.}

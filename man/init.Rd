@@ -7,8 +7,8 @@
 init(filename = paste0(format(Sys.time(), "\%y\%m\%d"), "_gwl"),
   RackLabel = "trough200_1_frt", RackID = "", RackType = "",
   Position = 0, TubeID = "", Volume = 0, LiquidClass = "",
-  TipMask = 0, ForcedRackType = "", MinDetectedVolume = "", Wash = "W",
-  WTtemplate = "basic")
+  TipMask = 0, ForcedRackType = "", MinDetectedVolume = "",
+  Wash = "W", WTtemplate = "basic")
 }
 \arguments{
 \item{filename}{string, the name of the generated worklist and worktable

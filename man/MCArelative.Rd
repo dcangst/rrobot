@@ -4,7 +4,8 @@
 \alias{MCArelative}
 \title{MCA Relative movement}
 \usage{
-MCArelative(col_offset = 0, row_offset = 0, arm = 0, verbose = FALSE)
+MCArelative(col_offset = 0, row_offset = 0, arm = 0,
+  verbose = FALSE)
 }
 \arguments{
 \item{col_offset}{integer, [-23,23], positive numbers move the MCA to the
