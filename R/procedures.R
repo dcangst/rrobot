@@ -386,7 +386,7 @@ iPTdip <- function(
   well_row <- (well - 1) %/% 24
   well_col <- well - well_row * 24 - 1
   adv_gwl_comment(str_c(
-    "dipping ", n_dips,"x in ",rack))
+    "dipping ", n_dips, "x in ", rack))
   MCArelative(well_col, well_row)
   moveMCA( # move over plate, z-travel
     RackLabel = rack,
@@ -444,7 +444,9 @@ iPTdip <- function(
 #'
 #' @param t_wait integer, time (s) to wait on blotting paper
 #' @param t_dry integer, time (s) over dryer
-#' @param n_dips integer, number of dips in reagents
+#' @param n_dips_1 integer, number of dips in reagent 1
+#' @param n_dips_2 integer, number of dips in reagent 2
+#' @param n_dips_3 integer, number of dips in reagents 3
 #' @param reservoirs vector of RackLabel of reservoirs to dip
 #' @param blots vector of Racklaberl of blotting spots
 #' @family advanced worklist procedures
@@ -452,7 +454,7 @@ iPTdip <- function(
 washPinTool <- function(
   t_wait = 2,
   t_dry = 90,
-  n_dips = 3,
+  n_dips_1 = 3, n_dips_2 = 3, n_dips_3 = 3,
   reservoirs = c("Bleach", "ddH2O", "Isopropanol"),
   blots = c("Blot1", "BlotBleach", "BlotH2O")){
   adv_gwl_comment("washing tips...")
@@ -472,7 +474,7 @@ washPinTool <- function(
     zMove = 0,
     zTarget = 2,
     speed = 10)
-  for (i in 1:(n_dips-1)){
+  for (i in 1:(n_dips_1 - 1)){
     moveMCA(
       RackLabel = reservoirs[1],
       ncol = 12,
@@ -519,7 +521,7 @@ washPinTool <- function(
     zMove = 0,
     zTarget = 2,
     speed = 10)
-  for (i in 1:n_dips){
+  for (i in 1:n_dips_2){
     moveMCA(
       RackLabel = reservoirs[2],
       ncol = 12,
@@ -543,7 +545,7 @@ washPinTool <- function(
     zMove = 0,
     zTarget = 2,
     speed = 10)
-  for (i in 1:n_dips){
+  for (i in 1:n_dips_3){
     moveMCA(
       RackLabel = reservoirs[3],
       ncol = 12,
