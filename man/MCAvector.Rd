@@ -4,8 +4,17 @@
 \alias{MCAvector}
 \title{MCA96 Vector command}
 \usage{
-MCAvector(move_vector, grid, site, direction = 0, back = 1,
-  beginAction = 2, endAction = 2, speed = 1, arm = 0)
+MCAvector(
+  move_vector,
+  grid,
+  site,
+  direction = 0,
+  back = 1,
+  beginAction = 2,
+  endAction = 2,
+  speed = 1,
+  arm = 0
+)
 }
 \arguments{
 \item{move_vector}{string, the name of the vector}
@@ -31,11 +40,17 @@ MCAvector(move_vector, grid, site, direction = 0, back = 1,
 execute MCA vector
 }
 \seealso{
-Other advanced worklist commands: \code{\link{MCArelative}},
-  \code{\link{adv_aspirate}}, \code{\link{adv_dispense}},
-  \code{\link{adv_gwl_comment}}, \code{\link{adv_mix}},
-  \code{\link{adv_wash}}, \code{\link{fwCommand}},
-  \code{\link{moveLiHa}}, \code{\link{moveMCA}},
-  \code{\link{startTimer}}, \code{\link{waitTimer}}
+Other advanced worklist commands: 
+\code{\link{MCArelative}()},
+\code{\link{adv_aspirate}()},
+\code{\link{adv_dispense}()},
+\code{\link{adv_gwl_comment}()},
+\code{\link{adv_mix}()},
+\code{\link{adv_wash}()},
+\code{\link{fwCommand}()},
+\code{\link{moveLiHa}()},
+\code{\link{moveMCA}()},
+\code{\link{startTimer}()},
+\code{\link{waitTimer}()}
 }
 \concept{advanced worklist commands}

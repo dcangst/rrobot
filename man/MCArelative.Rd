@@ -4,8 +4,7 @@
 \alias{MCArelative}
 \title{MCA Relative movement}
 \usage{
-MCArelative(col_offset = 0, row_offset = 0, arm = 0,
-  verbose = FALSE)
+MCArelative(col_offset = 0, row_offset = 0, arm = 0, verbose = FALSE)
 }
 \arguments{
 \item{col_offset}{integer, [-23,23], positive numbers move the MCA to the
@@ -23,11 +22,17 @@ front, negative to the back. Defaults to 0 = reset offset.}
 Sets an offset to the MCA
 }
 \seealso{
-Other advanced worklist commands: \code{\link{MCAvector}},
-  \code{\link{adv_aspirate}}, \code{\link{adv_dispense}},
-  \code{\link{adv_gwl_comment}}, \code{\link{adv_mix}},
-  \code{\link{adv_wash}}, \code{\link{fwCommand}},
-  \code{\link{moveLiHa}}, \code{\link{moveMCA}},
-  \code{\link{startTimer}}, \code{\link{waitTimer}}
+Other advanced worklist commands: 
+\code{\link{MCAvector}()},
+\code{\link{adv_aspirate}()},
+\code{\link{adv_dispense}()},
+\code{\link{adv_gwl_comment}()},
+\code{\link{adv_mix}()},
+\code{\link{adv_wash}()},
+\code{\link{fwCommand}()},
+\code{\link{moveLiHa}()},
+\code{\link{moveMCA}()},
+\code{\link{startTimer}()},
+\code{\link{waitTimer}()}
 }
 \concept{advanced worklist commands}

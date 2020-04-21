@@ -13,9 +13,12 @@
 takes a vector representing a binary number and gives the decimal value
 }
 \seealso{
-Other internal: \code{\link{.advVolumeString}},
-  \code{\link{.convertXMLtime}}, \code{\link{.decToBin}},
-  \code{\link{.listToDf}}, \code{\link{.updateVolume}},
-  \code{\link{getGridSite}}
+Other internal: 
+\code{\link{.advVolumeString}()},
+\code{\link{.convertXMLtime}()},
+\code{\link{.decToBin}()},
+\code{\link{.listToDf}()},
+\code{\link{.updateVolume}()},
+\code{\link{getGridSite}()}
 }
 \concept{internal}

@@ -15,12 +15,17 @@ waitTimer(timer, timeSpan)
 Wait for Timer
 }
 \seealso{
-Other advanced worklist commands: \code{\link{MCArelative}},
-  \code{\link{MCAvector}}, \code{\link{adv_aspirate}},
-  \code{\link{adv_dispense}},
-  \code{\link{adv_gwl_comment}}, \code{\link{adv_mix}},
-  \code{\link{adv_wash}}, \code{\link{fwCommand}},
-  \code{\link{moveLiHa}}, \code{\link{moveMCA}},
-  \code{\link{startTimer}}
+Other advanced worklist commands: 
+\code{\link{MCArelative}()},
+\code{\link{MCAvector}()},
+\code{\link{adv_aspirate}()},
+\code{\link{adv_dispense}()},
+\code{\link{adv_gwl_comment}()},
+\code{\link{adv_mix}()},
+\code{\link{adv_wash}()},
+\code{\link{fwCommand}()},
+\code{\link{moveLiHa}()},
+\code{\link{moveMCA}()},
+\code{\link{startTimer}()}
 }
 \concept{advanced worklist commands}

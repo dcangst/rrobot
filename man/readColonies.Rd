@@ -4,8 +4,15 @@
 \alias{readColonies}
 \title{Analyze colonies from Pickolo .csv}
 \usage{
-readColonies(csv_path, n_row = 16, row_start_coord = 185,
-  row_d = 56.5, n_col = 24, col_start_coord = 155, col_d = 56.5)
+readColonies(
+  csv_path,
+  n_row = 16,
+  row_start_coord = 185,
+  row_d = 56.5,
+  n_col = 24,
+  col_start_coord = 155,
+  col_d = 56.5
+)
 }
 \arguments{
 \item{csv_path}{path to csv file from Pickolo}
@@ -32,6 +39,7 @@ Defaults should work for 384 Well plate
 }
 
 \seealso{
-Other pickolo methods: \code{\link{plotColonies}}
+Other pickolo methods: 
+\code{\link{plotColonies}()}
 }
 \concept{pickolo methods}

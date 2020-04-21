@@ -10,9 +10,12 @@ gwl_flush()
 It discards the contents of the tips without washing them.
 }
 \seealso{
-Other basic worklist commands: \code{\link{aspirate}},
-  \code{\link{dispense}}, \code{\link{distribute}},
-  \code{\link{gwl_break}}, \code{\link{gwl_comment}},
-  \code{\link{wash}}
+Other basic worklist commands: 
+\code{\link{aspirate}()},
+\code{\link{dispense}()},
+\code{\link{distribute}()},
+\code{\link{gwl_break}()},
+\code{\link{gwl_comment}()},
+\code{\link{wash}()}
 }
 \concept{basic worklist commands}

@@ -23,7 +23,8 @@ generates data.frame combining commands if they are the same
 }
 
 \seealso{
-Other gwl check: \code{\link{gwlToHTML}},
-  \code{\link{gwlToTable}}
+Other gwl check: 
+\code{\link{gwlToHTML}()},
+\code{\link{gwlToTable}()}
 }
 \concept{gwl check}

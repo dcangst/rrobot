@@ -20,7 +20,8 @@ read in gwl file
 }
 
 \seealso{
-Other gwl_check: \code{\link{gwl_df_part}},
-  \code{\link{read_gwl_df}}
+Other gwl_check: 
+\code{\link{gwl_df_part}()},
+\code{\link{read_gwl_df}()}
 }
 \concept{gwl_check}

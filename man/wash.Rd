@@ -13,9 +13,12 @@ wash(W = gwl$defaults$Wash)
 The Wash Tips record washes the tip which was used by the preceeding Aspirate record. There are no parameters (the wash position, wash parameters are specified in the Worklist command).
 }
 \seealso{
-Other basic worklist commands: \code{\link{aspirate}},
-  \code{\link{dispense}}, \code{\link{distribute}},
-  \code{\link{gwl_break}}, \code{\link{gwl_comment}},
-  \code{\link{gwl_flush}}
+Other basic worklist commands: 
+\code{\link{aspirate}()},
+\code{\link{dispense}()},
+\code{\link{distribute}()},
+\code{\link{gwl_break}()},
+\code{\link{gwl_comment}()},
+\code{\link{gwl_flush}()}
 }
 \concept{basic worklist commands}

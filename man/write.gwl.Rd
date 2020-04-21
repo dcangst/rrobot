@@ -4,8 +4,13 @@
 \alias{write.gwl}
 \title{Write worklist to file}
 \usage{
-write.gwl(gwl, print = FALSE, lineNumbers = TRUE, saveWT = FALSE,
-  quietly = FALSE)
+write.gwl(
+  gwl,
+  print = FALSE,
+  lineNumbers = TRUE,
+  saveWT = FALSE,
+  quietly = FALSE
+)
 }
 \arguments{
 \item{gwl}{object of class gwl}
@@ -20,7 +25,9 @@ write.gwl(gwl, print = FALSE, lineNumbers = TRUE, saveWT = FALSE,
 writes worklist to file, filename defined in \code{init}.
 }
 \seealso{
-Other general methods: \code{\link{addToWorklist}},
-  \code{\link{addToWorktable}}, \code{\link{init}}
+Other general methods: 
+\code{\link{addToWorklist}()},
+\code{\link{addToWorktable}()},
+\code{\link{init}()}
 }
 \concept{general methods}

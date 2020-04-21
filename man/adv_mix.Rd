@@ -4,11 +4,22 @@
 \alias{adv_mix}
 \title{Adv Mix Command}
 \usage{
-adv_mix(tipMask = c(1, 0, 0, 0, 0, 0, 0, 0),
+adv_mix(
+  tipMask = c(1, 0, 0, 0, 0, 0, 0, 0),
   liquidClass = gwl$defaults$LiquidClass,
-  volumes = gwl$defaults$Volume, RackLabel, spacing = 2, wellSelection,
-  ncol, nrow, cycles, noOfLoopOptions = 0, loopName = "", action = 0,
-  difference = 0, arm = 0)
+  volumes = gwl$defaults$Volume,
+  RackLabel,
+  spacing = 2,
+  wellSelection,
+  ncol,
+  nrow,
+  cycles,
+  noOfLoopOptions = 0,
+  loopName = "",
+  action = 0,
+  difference = 0,
+  arm = 0
+)
 }
 \arguments{
 \item{tipMask}{\code{vector("integer",8L)}  containing 0, 1 indicating
@@ -58,12 +69,17 @@ assigned to the labware.}
 Adv Mix Command
 }
 \seealso{
-Other advanced worklist commands: \code{\link{MCArelative}},
-  \code{\link{MCAvector}}, \code{\link{adv_aspirate}},
-  \code{\link{adv_dispense}},
-  \code{\link{adv_gwl_comment}}, \code{\link{adv_wash}},
-  \code{\link{fwCommand}}, \code{\link{moveLiHa}},
-  \code{\link{moveMCA}}, \code{\link{startTimer}},
-  \code{\link{waitTimer}}
+Other advanced worklist commands: 
+\code{\link{MCArelative}()},
+\code{\link{MCAvector}()},
+\code{\link{adv_aspirate}()},
+\code{\link{adv_dispense}()},
+\code{\link{adv_gwl_comment}()},
+\code{\link{adv_wash}()},
+\code{\link{fwCommand}()},
+\code{\link{moveLiHa}()},
+\code{\link{moveMCA}()},
+\code{\link{startTimer}()},
+\code{\link{waitTimer}()}
 }
 \concept{advanced worklist commands}

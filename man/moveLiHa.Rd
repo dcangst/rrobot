@@ -4,10 +4,23 @@
 \alias{moveLiHa}
 \title{Move LiHa}
 \usage{
-moveLiHa(tipMask = c(1, 0, 0, 0, 0, 0, 0, 0), RackLabel, spacing = 1,
-  wellSelection, ncol, nrow, zMove, zTarget, offset, speed,
-  noOfLoopOptions = 0, loopName = "", action = 0, difference = 0,
-  arm = 0)
+moveLiHa(
+  tipMask = c(1, 0, 0, 0, 0, 0, 0, 0),
+  RackLabel,
+  spacing = 1,
+  wellSelection,
+  ncol,
+  nrow,
+  zMove,
+  zTarget,
+  offset,
+  speed,
+  noOfLoopOptions = 0,
+  loopName = "",
+  action = 0,
+  difference = 0,
+  arm = 0
+)
 }
 \arguments{
 \item{tipMask}{\code{vector("integer",8L)}  containing 0, 1 indicating
@@ -57,12 +70,17 @@ action, \code{vector("character",noOfLoopOptions)}}
 Move LiHa
 }
 \seealso{
-Other advanced worklist commands: \code{\link{MCArelative}},
-  \code{\link{MCAvector}}, \code{\link{adv_aspirate}},
-  \code{\link{adv_dispense}},
-  \code{\link{adv_gwl_comment}}, \code{\link{adv_mix}},
-  \code{\link{adv_wash}}, \code{\link{fwCommand}},
-  \code{\link{moveMCA}}, \code{\link{startTimer}},
-  \code{\link{waitTimer}}
+Other advanced worklist commands: 
+\code{\link{MCArelative}()},
+\code{\link{MCAvector}()},
+\code{\link{adv_aspirate}()},
+\code{\link{adv_dispense}()},
+\code{\link{adv_gwl_comment}()},
+\code{\link{adv_mix}()},
+\code{\link{adv_wash}()},
+\code{\link{fwCommand}()},
+\code{\link{moveMCA}()},
+\code{\link{startTimer}()},
+\code{\link{waitTimer}()}
 }
 \concept{advanced worklist commands}

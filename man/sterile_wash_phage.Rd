@@ -4,14 +4,16 @@
 \alias{sterile_wash_phage}
 \title{Custom Sterile Wash procedure for Phage work}
 \usage{
-sterile_wash_phage(wash_solution1 = "trough100_bck",
+sterile_wash_phage(
+  wash_solution1 = "trough100_bck",
   wash_solution1_liquidClass = "sterileWash_N_NaOH",
   wash_solution2 = "trough_bleach",
   wash_solution2_liquidClass = "sterileWash_N_bleach",
   wash_solution3 = "trough_EtOH",
   wash_solution3_liquidClass = "sterileWash_N_EtOH",
   wash_solution4 = "trough_H2O",
-  wash_solution4_liquidClass = "sterileWash_N_H2O")
+  wash_solution4_liquidClass = "sterileWash_N_H2O"
+)
 }
 \arguments{
 \item{wash_solution1}{RackLabel containing first wash solution}
@@ -42,10 +44,14 @@ fourth wash solution}
 Washes & sterilizes all tips, hopefully. Kills phages, hopefully.
 }
 \seealso{
-Other advanced worklist procedures: \code{\link{evowait}},
-  \code{\link{iPTdeactivate}}, \code{\link{iPTdip}},
-  \code{\link{sterile_wash_TT}},
-  \code{\link{sterile_wash}}, \code{\link{tiptouch}},
-  \code{\link{washPinTool}}
+Other advanced worklist procedures: 
+\code{\link{evowait}()},
+\code{\link{iPTdeactivate}()},
+\code{\link{iPTdip}()},
+\code{\link{sterile_wash_TT}()},
+\code{\link{sterile_wash_c}()},
+\code{\link{sterile_wash}()},
+\code{\link{tiptouch}()},
+\code{\link{washPinTool}()}
 }
 \concept{advanced worklist procedures}

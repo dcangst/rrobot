@@ -15,7 +15,8 @@ ANSIIfromVector(x, length = 7)
 generates ANSII letter from a vector with numbers 1 to 7 indicating which well in this group of 7 is used.
 }
 \seealso{
-Other accessory functions: \code{\link{ANSIIFromWells}},
-  \code{\link{wellsFromANSII}}
+Other accessory functions: 
+\code{\link{ANSIIFromWells}()},
+\code{\link{wellsFromANSII}()}
 }
 \concept{accessory functions}

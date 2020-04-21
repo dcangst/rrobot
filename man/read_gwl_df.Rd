@@ -20,7 +20,8 @@ read in gwl file, and covert to data_frame
 }
 
 \seealso{
-Other gwl_check: \code{\link{gwl_df_part}},
-  \code{\link{read_gwl}}
+Other gwl_check: 
+\code{\link{gwl_df_part}()},
+\code{\link{read_gwl}()}
 }
 \concept{gwl_check}

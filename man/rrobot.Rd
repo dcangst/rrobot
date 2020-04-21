@@ -3,7 +3,6 @@
 \docType{package}
 \name{rrobot}
 \alias{rrobot}
-\alias{rrobot-package}
 \title{rrobot.
 A package containing tools for worklist generation for the freedom evo.}
 \description{

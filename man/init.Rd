@@ -4,11 +4,21 @@
 \alias{init}
 \title{Initialize Worklist & set defaults}
 \usage{
-init(filename = paste0(format(Sys.time(), "\%y\%m\%d"), "_gwl"),
-  RackLabel = "trough200_1_frt", RackID = "", RackType = "",
-  Position = 0, TubeID = "", Volume = 0, LiquidClass = "",
-  TipMask = 0, ForcedRackType = "", MinDetectedVolume = "",
-  Wash = "W", WTtemplate = "basic")
+init(
+  filename = paste0(format(Sys.time(), "\%y\%m\%d"), "_gwl"),
+  RackLabel = "trough200_1_frt",
+  RackID = "",
+  RackType = "",
+  Position = 0,
+  TubeID = "",
+  Volume = 0,
+  LiquidClass = "",
+  TipMask = 0,
+  ForcedRackType = "",
+  MinDetectedVolume = "",
+  Wash = "W",
+  WTtemplate = "basic"
+)
 }
 \arguments{
 \item{filename}{string, the name of the generated worklist and worktable
@@ -68,7 +78,9 @@ Initialization. Generates object \code{gwl} in \code{.GlobalEnv}
 }
 
 \seealso{
-Other general methods: \code{\link{addToWorklist}},
-  \code{\link{addToWorktable}}, \code{\link{write.gwl}}
+Other general methods: 
+\code{\link{addToWorklist}()},
+\code{\link{addToWorktable}()},
+\code{\link{write.gwl}()}
 }
 \concept{general methods}

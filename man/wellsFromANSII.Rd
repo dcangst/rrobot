@@ -14,7 +14,8 @@ calculates the selected wells from the ANSII string (The position starts with
   1 and increases from rear to front and left to right.)
 }
 \seealso{
-Other accessory functions: \code{\link{ANSIIFromWells}},
-  \code{\link{ANSIIfromVector}}
+Other accessory functions: 
+\code{\link{ANSIIFromWells}()},
+\code{\link{ANSIIfromVector}()}
 }
 \concept{accessory functions}

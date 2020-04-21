@@ -19,7 +19,9 @@ rc_to_well(row, col, n_row, n_col)
 well number from row and column
 }
 \seealso{
-Other general: \code{\link{generateMasks}},
-  \code{\link{read_storex}}, \code{\link{shortestPath}}
+Other general: 
+\code{\link{generateMasks}()},
+\code{\link{read_storex}()},
+\code{\link{shortestPath}()}
 }
 \concept{general}

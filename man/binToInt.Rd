@@ -18,6 +18,7 @@ no description
 }
 
 \seealso{
-Other hospital_experiment: \code{\link{intToBin}}
+Other hospital_experiment: 
+\code{\link{intToBin}()}
 }
 \concept{hospital_experiment}

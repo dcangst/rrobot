@@ -4,8 +4,17 @@
 \alias{tiptouch}
 \title{Tip Touch}
 \usage{
-tiptouch(tip_mask, wells, rack, ncol = 24, nrow = 16, spacing = 2,
-  speed_move, speed_in, speed_out)
+tiptouch(
+  tip_mask,
+  wells,
+  rack,
+  ncol = 24,
+  nrow = 16,
+  spacing = 2,
+  speed_move,
+  speed_in,
+  speed_out
+)
 }
 \arguments{
 \item{tip_mask}{tip mask for source}
@@ -30,10 +39,14 @@ tiptouch(tip_mask, wells, rack, ncol = 24, nrow = 16, spacing = 2,
 Transfering by tiptouching using the tips
 }
 \seealso{
-Other advanced worklist procedures: \code{\link{evowait}},
-  \code{\link{iPTdeactivate}}, \code{\link{iPTdip}},
-  \code{\link{sterile_wash_TT}},
-  \code{\link{sterile_wash_phage}},
-  \code{\link{sterile_wash}}, \code{\link{washPinTool}}
+Other advanced worklist procedures: 
+\code{\link{evowait}()},
+\code{\link{iPTdeactivate}()},
+\code{\link{iPTdip}()},
+\code{\link{sterile_wash_TT}()},
+\code{\link{sterile_wash_c}()},
+\code{\link{sterile_wash_phage}()},
+\code{\link{sterile_wash}()},
+\code{\link{washPinTool}()}
 }
 \concept{advanced worklist procedures}

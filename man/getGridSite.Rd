@@ -14,9 +14,12 @@ internal function to get grid/site from racklabel.
 Used in advanced worklist functions
 }
 \seealso{
-Other internal: \code{\link{.advVolumeString}},
-  \code{\link{.binToDec}}, \code{\link{.convertXMLtime}},
-  \code{\link{.decToBin}}, \code{\link{.listToDf}},
-  \code{\link{.updateVolume}}
+Other internal: 
+\code{\link{.advVolumeString}()},
+\code{\link{.binToDec}()},
+\code{\link{.convertXMLtime}()},
+\code{\link{.decToBin}()},
+\code{\link{.listToDf}()},
+\code{\link{.updateVolume}()}
 }
 \concept{internal}

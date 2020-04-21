@@ -4,13 +4,19 @@
 \alias{dispense}
 \title{Dispense Command}
 \usage{
-dispense(RackLabel = gwl$defaults$RackLabel,
-  RackID = gwl$defaults$RackID, RackType = gwl$defaults$RackType,
-  Position = gwl$defaults$Position, TubeID = gwl$defaults$TubeID,
-  Volume = gwl$defaults$Volume, LiquidClass = gwl$defaults$LiquidClass,
-  TipType = "", TipMask = gwl$defaults$TipMask,
+dispense(
+  RackLabel = gwl$defaults$RackLabel,
+  RackID = gwl$defaults$RackID,
+  RackType = gwl$defaults$RackType,
+  Position = gwl$defaults$Position,
+  TubeID = gwl$defaults$TubeID,
+  Volume = gwl$defaults$Volume,
+  LiquidClass = gwl$defaults$LiquidClass,
+  TipType = "",
+  TipMask = gwl$defaults$TipMask,
   ForcedRackType = gwl$defaults$ForcedRackType,
-  MinDetectedVolume = gwl$defaults$MinDetectedVolume)
+  MinDetectedVolume = gwl$defaults$MinDetectedVolume
+)
 }
 \arguments{
 \item{RackLabel}{Max. 32 characters User-defined label (name) which is assigned to the labware.}
@@ -39,9 +45,12 @@ dispense(RackLabel = gwl$defaults$RackLabel,
 Dispense Command
 }
 \seealso{
-Other basic worklist commands: \code{\link{aspirate}},
-  \code{\link{distribute}}, \code{\link{gwl_break}},
-  \code{\link{gwl_comment}}, \code{\link{gwl_flush}},
-  \code{\link{wash}}
+Other basic worklist commands: 
+\code{\link{aspirate}()},
+\code{\link{distribute}()},
+\code{\link{gwl_break}()},
+\code{\link{gwl_comment}()},
+\code{\link{gwl_flush}()},
+\code{\link{wash}()}
 }
 \concept{basic worklist commands}

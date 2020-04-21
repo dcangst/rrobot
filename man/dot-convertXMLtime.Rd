@@ -19,9 +19,12 @@ converts the time from the reader xml to a R format
 }
 
 \seealso{
-Other internal: \code{\link{.advVolumeString}},
-  \code{\link{.binToDec}}, \code{\link{.decToBin}},
-  \code{\link{.listToDf}}, \code{\link{.updateVolume}},
-  \code{\link{getGridSite}}
+Other internal: 
+\code{\link{.advVolumeString}()},
+\code{\link{.binToDec}()},
+\code{\link{.decToBin}()},
+\code{\link{.listToDf}()},
+\code{\link{.updateVolume}()},
+\code{\link{getGridSite}()}
 }
 \concept{internal}

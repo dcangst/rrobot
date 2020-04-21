@@ -4,9 +4,21 @@
 \alias{moveMCA}
 \title{MCA Move}
 \usage{
-moveMCA(RackLabel, quadrant = 1, ncol = 24, nrow = 16, zMove,
-  zTarget, offset = 0, speed, noOfLoopOptions = 0, loopName = "",
-  action = 0, difference = 0, arm = 0)
+moveMCA(
+  RackLabel,
+  quadrant = 1,
+  ncol = 24,
+  nrow = 16,
+  zMove,
+  zTarget,
+  offset = 0,
+  speed,
+  noOfLoopOptions = 0,
+  loopName = "",
+  action = 0,
+  difference = 0,
+  arm = 0
+)
 }
 \arguments{
 \item{RackLabel}{Max. 32 characters User-defined label (name) which is
@@ -50,12 +62,17 @@ action, \code{vector("character",noOfLoopOptions)}}
 Move MCA to labware
 }
 \seealso{
-Other advanced worklist commands: \code{\link{MCArelative}},
-  \code{\link{MCAvector}}, \code{\link{adv_aspirate}},
-  \code{\link{adv_dispense}},
-  \code{\link{adv_gwl_comment}}, \code{\link{adv_mix}},
-  \code{\link{adv_wash}}, \code{\link{fwCommand}},
-  \code{\link{moveLiHa}}, \code{\link{startTimer}},
-  \code{\link{waitTimer}}
+Other advanced worklist commands: 
+\code{\link{MCArelative}()},
+\code{\link{MCAvector}()},
+\code{\link{adv_aspirate}()},
+\code{\link{adv_dispense}()},
+\code{\link{adv_gwl_comment}()},
+\code{\link{adv_mix}()},
+\code{\link{adv_wash}()},
+\code{\link{fwCommand}()},
+\code{\link{moveLiHa}()},
+\code{\link{startTimer}()},
+\code{\link{waitTimer}()}
 }
 \concept{advanced worklist commands}

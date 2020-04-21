@@ -4,8 +4,16 @@
 \alias{fwCommand}
 \title{Send Firmware command}
 \usage{
-fwCommand(command, options = 1, parameter = 1, response = "",
-  error = "", errorScope = 2, responseScope = 2, responseType = 0)
+fwCommand(
+  command,
+  options = 1,
+  parameter = 1,
+  response = "",
+  error = "",
+  errorScope = 2,
+  responseScope = 2,
+  responseType = 0
+)
 }
 \arguments{
 \item{command}{string, the command}
@@ -33,12 +41,17 @@ stored in the variable “response”}
 sends a firmware command
 }
 \seealso{
-Other advanced worklist commands: \code{\link{MCArelative}},
-  \code{\link{MCAvector}}, \code{\link{adv_aspirate}},
-  \code{\link{adv_dispense}},
-  \code{\link{adv_gwl_comment}}, \code{\link{adv_mix}},
-  \code{\link{adv_wash}}, \code{\link{moveLiHa}},
-  \code{\link{moveMCA}}, \code{\link{startTimer}},
-  \code{\link{waitTimer}}
+Other advanced worklist commands: 
+\code{\link{MCArelative}()},
+\code{\link{MCAvector}()},
+\code{\link{adv_aspirate}()},
+\code{\link{adv_dispense}()},
+\code{\link{adv_gwl_comment}()},
+\code{\link{adv_mix}()},
+\code{\link{adv_wash}()},
+\code{\link{moveLiHa}()},
+\code{\link{moveMCA}()},
+\code{\link{startTimer}()},
+\code{\link{waitTimer}()}
 }
 \concept{advanced worklist commands}

@@ -18,7 +18,9 @@ advanced worklist command.}
 adds a command to the worklist
 }
 \seealso{
-Other general methods: \code{\link{addToWorktable}},
-  \code{\link{init}}, \code{\link{write.gwl}}
+Other general methods: 
+\code{\link{addToWorktable}()},
+\code{\link{init}()},
+\code{\link{write.gwl}()}
 }
 \concept{general methods}

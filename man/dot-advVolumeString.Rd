@@ -13,9 +13,12 @@
 generates the string of volumes needed for the advanced worklist
 }
 \seealso{
-Other internal: \code{\link{.binToDec}},
-  \code{\link{.convertXMLtime}}, \code{\link{.decToBin}},
-  \code{\link{.listToDf}}, \code{\link{.updateVolume}},
-  \code{\link{getGridSite}}
+Other internal: 
+\code{\link{.binToDec}()},
+\code{\link{.convertXMLtime}()},
+\code{\link{.decToBin}()},
+\code{\link{.listToDf}()},
+\code{\link{.updateVolume}()},
+\code{\link{getGridSite}()}
 }
 \concept{internal}

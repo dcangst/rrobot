@@ -81,5 +81,3 @@
 #' @name rrobot
 #' @docType package
 NULL
-
-

@@ -4,8 +4,7 @@
 \alias{iPTdip}
 \title{iPT384 pin transfer}
 \usage{
-iPTdip(rack, well, n_dips = 3, speed_move = 35, speed_in = 5,
-  speed_out = 5)
+iPTdip(rack, well, n_dips = 3, speed_move = 35, speed_in = 5, speed_out = 5)
 }
 \arguments{
 \item{rack}{string, Racklabel of target, as in gwl$worktable}
@@ -25,11 +24,14 @@ pick up 4 adjacent wells on a 384 well plate with the 4 pins in the back left
  corner of the iPT384. Make sure all other pins are deactivated!
 }
 \seealso{
-Other advanced worklist procedures: \code{\link{evowait}},
-  \code{\link{iPTdeactivate}},
-  \code{\link{sterile_wash_TT}},
-  \code{\link{sterile_wash_phage}},
-  \code{\link{sterile_wash}}, \code{\link{tiptouch}},
-  \code{\link{washPinTool}}
+Other advanced worklist procedures: 
+\code{\link{evowait}()},
+\code{\link{iPTdeactivate}()},
+\code{\link{sterile_wash_TT}()},
+\code{\link{sterile_wash_c}()},
+\code{\link{sterile_wash_phage}()},
+\code{\link{sterile_wash}()},
+\code{\link{tiptouch}()},
+\code{\link{washPinTool}()}
 }
 \concept{advanced worklist procedures}

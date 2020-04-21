@@ -4,8 +4,7 @@
 \alias{gwlToHTML}
 \title{crate a html report from a worklist file}
 \usage{
-gwlToHTML(gwl = file.choose(), output = NULL, .progress = TRUE,
-  cleanup = TRUE)
+gwlToHTML(gwl = file.choose(), output = NULL, .progress = TRUE, cleanup = TRUE)
 }
 \arguments{
 \item{output}{where should the output be saved? If \code{NULL} then the html
@@ -22,7 +21,8 @@ generate pretty html report
 }
 
 \seealso{
-Other gwl check: \code{\link{gwlToDataFrame}},
-  \code{\link{gwlToTable}}
+Other gwl check: 
+\code{\link{gwlToDataFrame}()},
+\code{\link{gwlToTable}()}
 }
 \concept{gwl check}

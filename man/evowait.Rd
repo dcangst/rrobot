@@ -15,10 +15,14 @@ evowait(timer, timeSpan)
 simpler timer
 }
 \seealso{
-Other advanced worklist procedures: \code{\link{iPTdeactivate}},
-  \code{\link{iPTdip}}, \code{\link{sterile_wash_TT}},
-  \code{\link{sterile_wash_phage}},
-  \code{\link{sterile_wash}}, \code{\link{tiptouch}},
-  \code{\link{washPinTool}}
+Other advanced worklist procedures: 
+\code{\link{iPTdeactivate}()},
+\code{\link{iPTdip}()},
+\code{\link{sterile_wash_TT}()},
+\code{\link{sterile_wash_c}()},
+\code{\link{sterile_wash_phage}()},
+\code{\link{sterile_wash}()},
+\code{\link{tiptouch}()},
+\code{\link{washPinTool}()}
 }
 \concept{advanced worklist procedures}

@@ -14,9 +14,12 @@ takes a list of vectors (possibly named) and makes a data.frame for easier
 display. Trys to make guesses for column names. Used in \code{\link{read_Infinite_XML}}
 }
 \seealso{
-Other internal: \code{\link{.advVolumeString}},
-  \code{\link{.binToDec}}, \code{\link{.convertXMLtime}},
-  \code{\link{.decToBin}}, \code{\link{.updateVolume}},
-  \code{\link{getGridSite}}
+Other internal: 
+\code{\link{.advVolumeString}()},
+\code{\link{.binToDec}()},
+\code{\link{.convertXMLtime}()},
+\code{\link{.decToBin}()},
+\code{\link{.updateVolume}()},
+\code{\link{getGridSite}()}
 }
 \concept{internal}

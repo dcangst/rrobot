@@ -4,11 +4,21 @@
 \alias{adv_wash}
 \title{Adv Wash Command}
 \usage{
-adv_wash(tipMask = rep(1, 8), RackLabel_waste = "wash1_waste",
-  RackLabel_cleaner = "wash1_shallow", wasteVol = 3,
-  wasteDelay = 500, cleanerVol = 4, cleanerDelay = 500,
-  Airgap = 10, airgapSpeed = 70, retractSpeed = 30, FastWash = 1,
-  lowVolume = 0, arm = 0)
+adv_wash(
+  tipMask = rep(1, 8),
+  RackLabel_waste = "wash1_waste",
+  RackLabel_cleaner = "wash1_shallow",
+  wasteVol = 3,
+  wasteDelay = 500,
+  cleanerVol = 4,
+  cleanerDelay = 500,
+  Airgap = 10,
+  airgapSpeed = 70,
+  retractSpeed = 30,
+  FastWash = 1,
+  lowVolume = 0,
+  arm = 0
+)
 }
 \arguments{
 \item{tipMask}{\code{vector("integer",8L)}  containing 0, 1 indicating
@@ -45,12 +55,17 @@ aspirated after washing the tips (system trailing airgap)}
 Adv Wash Command
 }
 \seealso{
-Other advanced worklist commands: \code{\link{MCArelative}},
-  \code{\link{MCAvector}}, \code{\link{adv_aspirate}},
-  \code{\link{adv_dispense}},
-  \code{\link{adv_gwl_comment}}, \code{\link{adv_mix}},
-  \code{\link{fwCommand}}, \code{\link{moveLiHa}},
-  \code{\link{moveMCA}}, \code{\link{startTimer}},
-  \code{\link{waitTimer}}
+Other advanced worklist commands: 
+\code{\link{MCArelative}()},
+\code{\link{MCAvector}()},
+\code{\link{adv_aspirate}()},
+\code{\link{adv_dispense}()},
+\code{\link{adv_gwl_comment}()},
+\code{\link{adv_mix}()},
+\code{\link{fwCommand}()},
+\code{\link{moveLiHa}()},
+\code{\link{moveMCA}()},
+\code{\link{startTimer}()},
+\code{\link{waitTimer}()}
 }
 \concept{advanced worklist commands}

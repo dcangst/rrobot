@@ -4,12 +4,24 @@
 \alias{distribute}
 \title{Reagent Distribution Command}
 \usage{
-distribute(SrcRackLabel = "", SrcRackID = "", SrcRackType = "",
-  SrcPosStart = "", SrcPosEnd = "", DestRackLabel = "",
-  DestRackID = "", DestRackType = "", DestPosStart = "",
-  DestPosEnd = "", Volume = gwl$defaults$Volume,
-  LiquidClass = gwl$defaults$LiquidClass, NoOfDitiReuses = 1,
-  NoOfMultiDisp = 1, Direction = 0, ExcludeDestWell = NA)
+distribute(
+  SrcRackLabel = "",
+  SrcRackID = "",
+  SrcRackType = "",
+  SrcPosStart = "",
+  SrcPosEnd = "",
+  DestRackLabel = "",
+  DestRackID = "",
+  DestRackType = "",
+  DestPosStart = "",
+  DestPosEnd = "",
+  Volume = gwl$defaults$Volume,
+  LiquidClass = gwl$defaults$LiquidClass,
+  NoOfDitiReuses = 1,
+  NoOfMultiDisp = 1,
+  Direction = 0,
+  ExcludeDestWell = NA
+)
 }
 \arguments{
 \item{SrcRackLabel}{Max. 32 characters User-defined label (name) which is assigned to the source labware.}
@@ -46,9 +58,12 @@ distribute(SrcRackLabel = "", SrcRackID = "", SrcRackType = "",
 The Reagent Distribution record specifies the aspiration and dispensing parameters for all of the tips you have chosen (and dispenses the same volume in all of the chosen wells in the destination labware).
 }
 \seealso{
-Other basic worklist commands: \code{\link{aspirate}},
-  \code{\link{dispense}}, \code{\link{gwl_break}},
-  \code{\link{gwl_comment}}, \code{\link{gwl_flush}},
-  \code{\link{wash}}
+Other basic worklist commands: 
+\code{\link{aspirate}()},
+\code{\link{dispense}()},
+\code{\link{gwl_break}()},
+\code{\link{gwl_comment}()},
+\code{\link{gwl_flush}()},
+\code{\link{wash}()}
 }
 \concept{basic worklist commands}

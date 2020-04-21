@@ -16,9 +16,12 @@ takes a decimal number and returns a vector representing a binary number.
 used for adv. well selection, hence length=7
 }
 \seealso{
-Other internal: \code{\link{.advVolumeString}},
-  \code{\link{.binToDec}}, \code{\link{.convertXMLtime}},
-  \code{\link{.listToDf}}, \code{\link{.updateVolume}},
-  \code{\link{getGridSite}}
+Other internal: 
+\code{\link{.advVolumeString}()},
+\code{\link{.binToDec}()},
+\code{\link{.convertXMLtime}()},
+\code{\link{.listToDf}()},
+\code{\link{.updateVolume}()},
+\code{\link{getGridSite}()}
 }
 \concept{internal}

@@ -10,9 +10,12 @@ gwl_break()
 The Break record forces the execution of previously specified aspirate, dispense or wash actions which have not yet been executed. If you don’t specify a Break record, Freedom EVOware normally executes pipetting commands in groups to optimize the efficiency. For example, if you have specified four tips in the Worlist command, Freedom EVOware will queue Aspirate records until four of them are ready for execution. This allows pipetting to take place using all four tips at the same time. Specify the Break record if you want to execute all of the currently queued commands without waiting. You can use the Break record e.g. to create a worklist which pipettes using only one tip at a time (even if you chose more than one tip in the tip selection).
 }
 \seealso{
-Other basic worklist commands: \code{\link{aspirate}},
-  \code{\link{dispense}}, \code{\link{distribute}},
-  \code{\link{gwl_comment}}, \code{\link{gwl_flush}},
-  \code{\link{wash}}
+Other basic worklist commands: 
+\code{\link{aspirate}()},
+\code{\link{dispense}()},
+\code{\link{distribute}()},
+\code{\link{gwl_comment}()},
+\code{\link{gwl_flush}()},
+\code{\link{wash}()}
 }
 \concept{basic worklist commands}

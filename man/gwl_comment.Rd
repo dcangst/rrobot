@@ -10,9 +10,12 @@ gwl_comment(comment)
 insert a comment into the worklist (ignored by EVOware).
 }
 \seealso{
-Other basic worklist commands: \code{\link{aspirate}},
-  \code{\link{dispense}}, \code{\link{distribute}},
-  \code{\link{gwl_break}}, \code{\link{gwl_flush}},
-  \code{\link{wash}}
+Other basic worklist commands: 
+\code{\link{aspirate}()},
+\code{\link{dispense}()},
+\code{\link{distribute}()},
+\code{\link{gwl_break}()},
+\code{\link{gwl_flush}()},
+\code{\link{wash}()}
 }
 \concept{basic worklist commands}

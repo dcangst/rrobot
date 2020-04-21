@@ -15,7 +15,9 @@ shortestPath(pins, method = "two_opt")
 using the TSP package
 }
 \seealso{
-Other general: \code{\link{generateMasks}},
-  \code{\link{rc_to_well}}, \code{\link{read_storex}}
+Other general: 
+\code{\link{generateMasks}()},
+\code{\link{rc_to_well}()},
+\code{\link{read_storex}()}
 }
 \concept{general}

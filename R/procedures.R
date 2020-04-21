@@ -15,27 +15,32 @@ evowait <- function(timer, timeSpan){
 #'
 #' Washes & sterilizes all tips, hopefully.
 #'
-#' @param wash_rack Wash station used (default: wash1_shallow)
-#' @param wash_waste Waste used (default: wash1_waste)
 #' @param wash_solution1 RackLabel containing first wash solution
 #' @param wash_solution1_liquidClass LiquidClass used to pipet first wash
 #'      solution
+#' @param wash_solution1_volume volume used in first wash
 #' @param wash_solution2 RackLabel containing second wash solution
 #' @param wash_solution2_liquidClass LiquidClass used to pipet
 #'      second wash solution
+#' @param wash_solution2_volume volume used in second wash
 #' @param wash_solution3 RackLabel containing second wash solution
 #' @param wash_solution3_liquidClass LiquidClass used to pipet
 #'      second wash solution
+#' @param wash_solution3_volume volume used in third wash
 #' @family advanced worklist procedures
 #' @export
 sterile_wash <- function(
   wash_solution1 = "trough_bleach",
   wash_solution1_liquidClass = "sterileWash_N_bleach",
+  wash_solution1_volume = 300,
   wash_solution2 = "trough_EtOH",
   wash_solution2_liquidClass = "sterileWash_N_EtOH",
+  wash_solution2_volume = 400,
   wash_solution3 = "trough_H2O",
-  wash_solution3_liquidClass = "sterileWash_N_H2O"
+  wash_solution3_liquidClass = "sterileWash_N_H2O",
+  wash_solution3_volume = 450
   ){
+
   adv_gwl_comment("sterile wash: NORMAL")
   gwl_comment("START: sterile wash: NORMAL")
 
@@ -45,11 +50,11 @@ sterile_wash <- function(
     retractSpeed = 30, FastWash = 1, lowVolume = 0, arm = 0)
 
   adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution1_liquidClass,
-    volumes = rep(350, 8), RackLabel = wash_solution1, spacing = 1,
+    volumes = rep(wash_solution1_volume, 8), RackLabel = wash_solution1, spacing = 1,
     wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
     action = 0, difference = 0, arm = 0)
   adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution1_liquidClass,
-      volumes = rep(350, 8), RackLabel = wash_solution1,
+      volumes = rep(wash_solution1_volume, 8), RackLabel = wash_solution1,
       spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
       loopName = "", action = 0, difference = 0, arm = 0)
 
@@ -59,20 +64,97 @@ sterile_wash <- function(
     retractSpeed = 30, FastWash = 1, lowVolume = 0, arm = 0)
 
   adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution2_liquidClass,
-    volumes = rep(400, 8), RackLabel = wash_solution2, spacing = 1,
+    volumes = rep(wash_solution2_volume, 8), RackLabel = wash_solution2, spacing = 1,
     wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
     action = 0, difference = 0, arm = 0)
   adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution2_liquidClass,
-      volumes = rep(400, 8), RackLabel = wash_solution2,
+      volumes = rep(wash_solution2_volume, 8), RackLabel = wash_solution2,
       spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
       loopName = "", action = 0, difference = 0, arm = 0)
 
   adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution3_liquidClass,
-    volumes = rep(400, 8), RackLabel = wash_solution3, spacing = 1,
+    volumes = rep(wash_solution3_volume, 8), RackLabel = wash_solution3, spacing = 1,
     wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
     action = 0, difference = 0, arm = 0)
   adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution3_liquidClass,
-      volumes = rep(400, 8), RackLabel = wash_solution3,
+      volumes = rep(wash_solution3_volume, 8), RackLabel = wash_solution3,
+      spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
+      loopName = "", action = 0, difference = 0, arm = 0)
+
+  moveLiHa(tipMask = rep(1, 8), RackLabel = wash_solution3,
+      spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8,
+      zMove = 0, zTarget = 4, offset = 0, speed = 10,
+      noOfLoopOptions = 0, loopName = "", action = 0, difference = 0, arm = 0)
+  gwl_comment("END: sterile wash: NORMAL")
+}
+
+#' Custom Sterile Wash procedure fro chemicals only
+#'
+#' Washes & sterilizes all tips, hopefully. skips bleach
+#'
+#' @param wash_solution1 RackLabel containing first wash solution
+#' @param wash_solution1_liquidClass LiquidClass used to pipet first wash
+#'      solution
+#' @param wash_solution1_volume volume used in first wash
+#' @param wash_solution2 RackLabel containing second wash solution
+#' @param wash_solution2_liquidClass LiquidClass used to pipet
+#'      second wash solution
+#' @param wash_solution2_volume volume used in second wash
+#' @param wash_solution3 RackLabel containing second wash solution
+#' @param wash_solution3_liquidClass LiquidClass used to pipet
+#'      second wash solution
+#' @param wash_solution3_volume volume used in third wash
+#' @family advanced worklist procedures
+#' @export
+sterile_wash_c <- function(
+  wash_solution1 = "trough_EtOH",
+  wash_solution1_liquidClass = "sterileWash_N_EtOH",
+  wash_solution1_volume = 300,
+  wash_solution2 = "trough_EtOH",
+  wash_solution2_liquidClass = "sterileWash_N_EtOH",
+  wash_solution2_volume = 400,
+  wash_solution3 = "trough_H2O",
+  wash_solution3_liquidClass = "sterileWash_N_H2O",
+  wash_solution3_volume = 450
+  ){
+
+  adv_gwl_comment("sterile wash: NORMAL")
+  gwl_comment("START: sterile wash: NORMAL")
+
+  adv_wash(tipMask = rep(1, 8), RackLabel_waste = "wash2_waste",
+    RackLabel_cleaner = "wash2_shallow", wasteVol = 1, wasteDelay = 500,
+    cleanerVol = 0.1, cleanerDelay = 0, Airgap = 10, airgapSpeed = 70,
+    retractSpeed = 30, FastWash = 1, lowVolume = 0, arm = 0)
+
+  adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution1_liquidClass,
+    volumes = rep(wash_solution1_volume, 8), RackLabel = wash_solution1, spacing = 1,
+    wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
+    action = 0, difference = 0, arm = 0)
+  adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution1_liquidClass,
+      volumes = rep(wash_solution1_volume, 8), RackLabel = wash_solution1,
+      spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
+      loopName = "", action = 0, difference = 0, arm = 0)
+
+  adv_wash(tipMask = rep(1, 8), RackLabel_waste = "wash1_waste",
+    RackLabel_cleaner = "wash1_shallow", wasteVol = 1, wasteDelay = 500,
+    cleanerVol = 2, cleanerDelay = 500, Airgap = 10, airgapSpeed = 70,
+    retractSpeed = 30, FastWash = 1, lowVolume = 0, arm = 0)
+
+  adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution2_liquidClass,
+    volumes = rep(wash_solution2_volume, 8), RackLabel = wash_solution2, spacing = 1,
+    wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
+    action = 0, difference = 0, arm = 0)
+  adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution2_liquidClass,
+      volumes = rep(wash_solution2_volume, 8), RackLabel = wash_solution2,
+      spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
+      loopName = "", action = 0, difference = 0, arm = 0)
+
+  adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution3_liquidClass,
+    volumes = rep(wash_solution3_volume, 8), RackLabel = wash_solution3, spacing = 1,
+    wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
+    action = 0, difference = 0, arm = 0)
+  adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution3_liquidClass,
+      volumes = rep(wash_solution3_volume, 8), RackLabel = wash_solution3,
       spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
       loopName = "", action = 0, difference = 0, arm = 0)
 
@@ -190,11 +272,11 @@ sterile_wash_phage <- function(
   gwl_comment("START: sterile wash: PHAGE")
 
   adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution1_liquidClass,
-    volumes = rep(350, 8), RackLabel = wash_solution1, spacing = 1,
+    volumes = rep(300, 8), RackLabel = wash_solution1, spacing = 1,
     wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
     action = 0, difference = 0, arm = 0)
   adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution1_liquidClass,
-      volumes = rep(350, 8), RackLabel = wash_solution1,
+      volumes = rep(300, 8), RackLabel = wash_solution1,
       spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
       loopName = "", action = 0, difference = 0, arm = 0)
 
@@ -204,11 +286,11 @@ sterile_wash_phage <- function(
     retractSpeed = 30, FastWash = 1, lowVolume = 0, arm = 0)
 
   adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution2_liquidClass,
-    volumes = rep(350, 8), RackLabel = wash_solution2, spacing = 1,
+    volumes = rep(300, 8), RackLabel = wash_solution2, spacing = 1,
     wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
     action = 0, difference = 0, arm = 0)
   adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution2_liquidClass,
-      volumes = rep(350, 8), RackLabel = wash_solution2,
+      volumes = rep(300, 8), RackLabel = wash_solution2,
       spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
       loopName = "", action = 0, difference = 0, arm = 0)
 
@@ -227,11 +309,11 @@ sterile_wash_phage <- function(
       loopName = "", action = 0, difference = 0, arm = 0)
 
   adv_aspirate(tipMask = rep(1, 8), liquidClass = wash_solution4_liquidClass,
-    volumes = rep(400, 8), RackLabel = wash_solution4, spacing = 1,
+    volumes = rep(450, 8), RackLabel = wash_solution4, spacing = 1,
     wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0, loopName = "",
     action = 0, difference = 0, arm = 0)
   adv_dispense(tipMask = rep(1, 8), liquidClass = wash_solution4_liquidClass,
-      volumes = rep(400, 8), RackLabel = wash_solution4,
+      volumes = rep(450, 8), RackLabel = wash_solution4,
       spacing = 1, wellSelection = 1:8, ncol = 1, nrow = 8, noOfLoopOptions = 0,
       loopName = "", action = 0, difference = 0, arm = 0)
 
@@ -455,17 +537,9 @@ washPinTool <- function(
   t_wait = 2,
   t_dry = 90,
   n_dips_1 = 3, n_dips_2 = 3, n_dips_3 = 3,
-  reservoirs = c("Bleach", "ddH2O", "Isopropanol"),
-  blots = c("Blot1", "BlotBleach", "BlotH2O")){
+  reservoirs = c("Bleach", "ddH2O", "EtOH"),
+  blots = c("Blot_frt", "Blot_mid", "Blot_bck")){
   adv_gwl_comment("washing tips...")
-  # blot 1: dirty
-  moveMCA(
-    RackLabel = blots[1],
-    zMove = 0,
-    zTarget = 3,
-    speed = 10)
-  # wait t_wait seconds
-  evowait(1, t_wait)
   #dip 3x in first reservoir
   moveMCA(
     RackLabel = reservoirs[1],
@@ -505,9 +579,9 @@ washPinTool <- function(
     zMove = 4,
     zTarget = 2,
     speed = 5)
-  # blot 2: bleach
+  # blot 1
   moveMCA(
-    RackLabel = blots[2],
+    RackLabel = blots[1],
     zMove = 0,
     zTarget = 3,
     speed = 10)
@@ -537,6 +611,14 @@ washPinTool <- function(
       zTarget = 2,
       speed = 60)
   }
+  # blot 2
+  moveMCA(
+    RackLabel = blots[2],
+    zMove = 0,
+    zTarget = 3,
+    speed = 10)
+  # wait t_wait seconds
+  evowait(1, t_wait)
   #dip 3x in 3nd reservoir
   moveMCA(
     RackLabel = reservoirs[3],

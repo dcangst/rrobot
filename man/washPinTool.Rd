@@ -4,9 +4,15 @@
 \alias{washPinTool}
 \title{Wash pin tool}
 \usage{
-washPinTool(t_wait = 2, t_dry = 90, n_dips_1 = 3, n_dips_2 = 3,
-  n_dips_3 = 3, reservoirs = c("Bleach", "ddH2O", "Isopropanol"),
-  blots = c("Blot1", "BlotBleach", "BlotH2O"))
+washPinTool(
+  t_wait = 2,
+  t_dry = 90,
+  n_dips_1 = 3,
+  n_dips_2 = 3,
+  n_dips_3 = 3,
+  reservoirs = c("Bleach", "ddH2O", "EtOH"),
+  blots = c("Blot_frt", "Blot_mid", "Blot_bck")
+)
 }
 \arguments{
 \item{t_wait}{integer, time (s) to wait on blotting paper}
@@ -27,10 +33,14 @@ washPinTool(t_wait = 2, t_dry = 90, n_dips_1 = 3, n_dips_2 = 3,
 Procedure to wash pintool
 }
 \seealso{
-Other advanced worklist procedures: \code{\link{evowait}},
-  \code{\link{iPTdeactivate}}, \code{\link{iPTdip}},
-  \code{\link{sterile_wash_TT}},
-  \code{\link{sterile_wash_phage}},
-  \code{\link{sterile_wash}}, \code{\link{tiptouch}}
+Other advanced worklist procedures: 
+\code{\link{evowait}()},
+\code{\link{iPTdeactivate}()},
+\code{\link{iPTdip}()},
+\code{\link{sterile_wash_TT}()},
+\code{\link{sterile_wash_c}()},
+\code{\link{sterile_wash_phage}()},
+\code{\link{sterile_wash}()},
+\code{\link{tiptouch}()}
 }
 \concept{advanced worklist procedures}

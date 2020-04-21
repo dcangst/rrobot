@@ -17,9 +17,12 @@
 internal function to add/subtract volumes from labware
 }
 \seealso{
-Other internal: \code{\link{.advVolumeString}},
-  \code{\link{.binToDec}}, \code{\link{.convertXMLtime}},
-  \code{\link{.decToBin}}, \code{\link{.listToDf}},
-  \code{\link{getGridSite}}
+Other internal: 
+\code{\link{.advVolumeString}()},
+\code{\link{.binToDec}()},
+\code{\link{.convertXMLtime}()},
+\code{\link{.decToBin}()},
+\code{\link{.listToDf}()},
+\code{\link{getGridSite}()}
 }
 \concept{internal}

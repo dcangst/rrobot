@@ -23,7 +23,8 @@ generate pretty tables
 }
 
 \seealso{
-Other gwl check: \code{\link{gwlToDataFrame}},
-  \code{\link{gwlToHTML}}
+Other gwl check: 
+\code{\link{gwlToDataFrame}()},
+\code{\link{gwlToHTML}()}
 }
 \concept{gwl check}

@@ -13,7 +13,9 @@ read_storex(storex_file)
 Reads storex pos list to data.frame
 }
 \seealso{
-Other general: \code{\link{generateMasks}},
-  \code{\link{rc_to_well}}, \code{\link{shortestPath}}
+Other general: 
+\code{\link{generateMasks}()},
+\code{\link{rc_to_well}()},
+\code{\link{shortestPath}()}
 }
 \concept{general}

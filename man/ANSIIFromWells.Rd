@@ -18,7 +18,8 @@ increases from rear to front and left to right.}
 calculates string for well selection in advanced worklist commands
 }
 \seealso{
-Other accessory functions: \code{\link{ANSIIfromVector}},
-  \code{\link{wellsFromANSII}}
+Other accessory functions: 
+\code{\link{ANSIIfromVector}()},
+\code{\link{wellsFromANSII}()}
 }
 \concept{accessory functions}

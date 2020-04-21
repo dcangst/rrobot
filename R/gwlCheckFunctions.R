@@ -111,7 +111,7 @@ gwl_df_part <- function(
   speed = NA,
   loop = as.character(NA),
   arm = as.character(NA)){
-  
+
   out <- data_frame(
     type = type,
     command = command,
@@ -209,7 +209,7 @@ read_gwl_df <- function(gwl_path=file.choose(), .progress=TRUE){
           attributes = str_replace_all(pars, "\\\"", ""))
       } else {
         worklist[[i]] <- gwl_df_part(
-          type = gwl_command[1], 
+          type = gwl_command[1],
           command = command,
           attributes = str_extract(gwl_command[2], "(?<=\\().+?(?=\\))"))
       }

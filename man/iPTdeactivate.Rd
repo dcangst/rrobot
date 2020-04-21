@@ -4,9 +4,13 @@
 \alias{iPTdeactivate}
 \title{iPinTool deactivate pins}
 \usage{
-iPTdeactivate(pins, RackLabel = "iPT tool",
-  readyVector = "PT getReady", pushVector1 = "PT Act 1-192",
-  pushVector2 = "PT Act 193-384")
+iPTdeactivate(
+  pins,
+  RackLabel = "iPT tool",
+  readyVector = "PT getReady",
+  pushVector1 = "PT Act 1-192",
+  pushVector2 = "PT Act 193-384"
+)
 }
 \arguments{
 \item{pins}{vector of integers 1:384, designating the pins to be deactivated.}
@@ -24,10 +28,14 @@ generates worklist procedures to deactivate pins. All pins are always activated
 when the pin tool is dropped onto the carrier.
 }
 \seealso{
-Other advanced worklist procedures: \code{\link{evowait}},
-  \code{\link{iPTdip}}, \code{\link{sterile_wash_TT}},
-  \code{\link{sterile_wash_phage}},
-  \code{\link{sterile_wash}}, \code{\link{tiptouch}},
-  \code{\link{washPinTool}}
+Other advanced worklist procedures: 
+\code{\link{evowait}()},
+\code{\link{iPTdip}()},
+\code{\link{sterile_wash_TT}()},
+\code{\link{sterile_wash_c}()},
+\code{\link{sterile_wash_phage}()},
+\code{\link{sterile_wash}()},
+\code{\link{tiptouch}()},
+\code{\link{washPinTool}()}
 }
 \concept{advanced worklist procedures}
