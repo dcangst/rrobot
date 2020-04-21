@@ -3,7 +3,7 @@ Title: Useful R functions for the Tecan Freedom Evo
 Version: 1.1.2
 Date: 2020-04-22
 Authors@R: as.person(c(
-  "Daniel Angst <dcangst@gmail.com> [aut, cre]",
+  "Daniel C Angst <dcangst@gmail.com> [aut, cre]",
   "Sebastian Bonhoeffer <seb@env.ethz.ch> [aut]"
   ))
 Description: functions for generating worklists and reading data from reader.
