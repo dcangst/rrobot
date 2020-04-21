@@ -1,6 +1,7 @@
 Package: rrobot
 Title: Useful R functions for the Tecan Freedom Evo
-Version: 1.1.1
+Version: 1.1.2
+Date: 2020-04-22
 Authors@R: as.person(c(
   "Daniel Angst <dcangst@gmail.com> [aut, cre]",
   "Sebastian Bonhoeffer <seb@env.ethz.ch> [aut]"
@@ -18,6 +19,7 @@ Depends:
     TSP
 Import:
 License: file LICENCE
+URL: https://github.com/dcangst/rrobot
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
