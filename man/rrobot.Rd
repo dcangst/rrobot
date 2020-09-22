@@ -5,10 +5,6 @@
 \alias{rrobot}
 \title{rrobot.
 A package containing tools for worklist generation for the freedom evo.}
-\description{
-rrobot.
-A package containing tools for worklist generation for the freedom evo.
-}
 \section{base methods}{
 
 

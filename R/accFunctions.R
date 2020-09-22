@@ -282,7 +282,7 @@ parse_args <- function(arg_names, arg_types = NULL){
     arg_types <- readr:::as.col_spec(arg_types)
   }
   args_df <- data.frame(t(args), stringsAsFactors = FALSE)
-  args_df <- tibble::as_data_frame(args_df)
+  args_df <- tibble::as_tibble(args_df)
   args_df <- readr::type_convert(args_df, col_types = arg_types)
 
   cat("arguments:\n")

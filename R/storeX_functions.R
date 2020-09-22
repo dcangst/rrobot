@@ -6,7 +6,7 @@
 #' @export
 read_storex <- function(storex_file){
   storex_raw <- read.table(file = storex_file, stringsAsFactors = FALSE)
-  storex <- as_data_frame(
+  storex <- as_tibble(
     str_split(storex_raw[, 1], ",|=", simplify = TRUE)) %>%
     mutate(
       cartridge = suppressWarnings(as.integer(V1)),

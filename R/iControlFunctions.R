@@ -69,5 +69,5 @@ readInfiniteXML <- function(file){
     stringsAsFactors = FALSE)
   data <- data[order(data$well), ]
 
-  return(list(data = as_data_frame(data), parameter = parameter))
+  return(list(data = as_tibble(data), parameter = parameter))
 }
