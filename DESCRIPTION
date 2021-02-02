@@ -1,6 +1,6 @@
 Package: rrobot
 Title: Useful R functions for the Tecan Freedom Evo
-Version: 1.1.2
+Version: 1.2
 Date: 2020-04-22
 Authors@R: as.person(c(
   "Daniel C Angst <dcangst@gmail.com> [aut, cre]",

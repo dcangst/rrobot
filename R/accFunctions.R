@@ -81,7 +81,7 @@ ANSIIFromWells <- function(wellSelection, ncol = 24, nrow = 16){
   plate_group7 <- matrix(rep(1:nGroup7, each = 7)[1:wellPlate],
     ncol = ncol, nrow = nrow)
 
-  df <- data_frame(well = as.vector(plate_wells),
+  df <- tibble(well = as.vector(plate_wells),
     group7 = as.vector(plate_group7),
     group7pos = rep(1:7, nGroup7)[1:wellPlate])
 
@@ -233,7 +233,7 @@ rc_to_well <- function(row, col, n_row, n_col){
 #' @param vol a vector of volumes for each of the tips
 #' @family general
 #' @export
-generateMasks <- function(tip, vol){
+generateMasks <- function(tip, vol) {
     tip_mask <- integer(8)
     vol_mask <- integer(8)
 
@@ -251,7 +251,7 @@ generateMasks <- function(tip, vol){
 #' @param method method to use, see \code{\link{TSP::solve_TSP}}
 #' @family general
 #' @export
-shortestPath <- function(pins, method = "two_opt"){
+shortestPath <- function(pins, method = "two_opt") {
   well_row <- (pins - 1) %/% 24
   well_col <- pins - well_row * 24 - 1
 

@@ -10,7 +10,7 @@ readInfiniteXML(file)
 \item{file}{path to XML file}
 }
 \description{
-reads iControl XML files and returns a data_frame
+reads iControl XML files and returns a tibble
 }
 \section{Output}{
 

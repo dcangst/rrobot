@@ -2,7 +2,7 @@
 % Please edit documentation in R/gwlCheckFunctions.R
 \name{gwl_df_part}
 \alias{gwl_df_part}
-\title{gwl data_frame part}
+\title{gwl tibble part}
 \usage{
 gwl_df_part(
   type = as.character(NA),

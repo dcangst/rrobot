@@ -2,7 +2,7 @@
 % Please edit documentation in R/gwlCheckFunctions.R
 \name{read_gwl_df}
 \alias{read_gwl_df}
-\title{Read in gwl file to data_frame}
+\title{Read in gwl file to tibble}
 \usage{
 read_gwl_df(gwl_path = file.choose(), .progress = TRUE)
 }
@@ -12,7 +12,7 @@ read_gwl_df(gwl_path = file.choose(), .progress = TRUE)
 \item{.progress}{should a progress bar be shown?}
 }
 \description{
-read in gwl file, and covert to data_frame
+read in gwl file, and covert to tibble
 }
 \section{Output}{
 

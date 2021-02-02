@@ -62,7 +62,7 @@ readColonies <- function(csv_path,
     col_wells = col_wells, col_breaks = col_breaks,
     col_lab = col_lab)
 
-  plate <- data_frame(
+  plate <- tibble(
     well = 1:384,
     row = rep(LETTERS[1:n_row], each = n_col),
     col = rep(1:n_col, n_row))

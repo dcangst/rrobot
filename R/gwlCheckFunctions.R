@@ -86,7 +86,7 @@ read_gwl <- function(gwl_path=file.choose(), .progress=TRUE){
   return(worklist)
 }
 
-#' gwl data_frame part
+#' gwl tibble part
 #' 
 #' helper function to create a dataframe of a gwl line
 #'
@@ -112,7 +112,7 @@ gwl_df_part <- function(
   loop = as.character(NA),
   arm = as.character(NA)){
 
-  out <- data_frame(
+  out <- tibble(
     type = type,
     command = command,
     attributes = attributes,
@@ -135,9 +135,9 @@ gwl_df_part <- function(
   return(out)
 }
 
-#' Read in gwl file to data_frame
+#' Read in gwl file to tibble
 #' 
-#' read in gwl file, and covert to data_frame
+#' read in gwl file, and covert to tibble
 #'
 #' @param gwl_path path to gwl file, defaults to \code{file.choose()} to open dialog
 #' @param .progress should a progress bar be shown?
