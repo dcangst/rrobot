@@ -20,13 +20,15 @@ readColonies <- function(csv_path,
   row_d = 56.5,
   n_col = 24,
   col_start_coord = 155,
-  col_d = 56.5){
+  col_d = 56.5) {
 
   pickoloData <- read_csv(csv_path,
     col_types = cols(
       x = col_integer(),
       y = col_integer(),
       size = col_integer(),
+      `min-diam` = col_integer(),
+      `max-diam` = col_integer(),
       circularity = col_double(),
       `min-distance` = col_integer(),
       red = col_integer(),
@@ -36,9 +38,15 @@ readColonies <- function(csv_path,
       saturation = col_integer(),
       value = col_integer(),
       selected = col_integer()
-    ))
-  names(pickoloData)[5] <- "min_distance"
-  pickoloData$selected <- pickoloData$selected != 0
+    )) %>%
+  rename(
+    min_diam = `min-diam`,
+    max_diam = `max-diam`,
+    min_distance = `min-distance`
+  ) %>%
+  mutate(
+    selected = selected != 0
+  )
 
   row_wells <- (row_start_coord + 0:n_row * row_d) - row_d / 2
   row_breaks <- c(0, row_wells, 1200)
@@ -67,11 +75,19 @@ readColonies <- function(csv_path,
     row = rep(LETTERS[1:n_row], each = n_col),
     col = rep(1:n_col, n_row))
 
-  growth <- merge(plate,
-    pickoloData[pickoloData$selected, 12:14], all.x = TRUE)
-  growth <- growth[order(growth$well), ]
-  growth$auto <- !is.na(growth$selected)
-  growth$manual <- NA
+  growth <- pickoloData %>%
+    filter(selected) %>%
+    select(selected, row, col) %>%
+    unique() %>%
+    right_join(plate, by = c("row", "col")) %>%
+    mutate(
+      auto = !is.na(selected),
+      manual = NA
+    ) %>%
+    select(
+      well, row, col, auto, manual
+    ) %>%
+    arrange(well)
 
   growth <- unique(growth)
   if (dim(growth)[1] != n_row * n_col) {
@@ -79,7 +95,7 @@ readColonies <- function(csv_path,
   }
 
   output <- list(
-    growth = growth[, c(1:3, 5:6)],
+    growth = growth,
     data = pickoloData,
     pars = well_par)
 
