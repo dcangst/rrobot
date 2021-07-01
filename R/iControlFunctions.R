@@ -1,6 +1,6 @@
 #' read XML from Tecan Infinity Reader
 #'
-#' reads iControl XML files and returns a tibble
+#' reads iControl XML file and returns a list
 #'
 #' @param file path to XML file
 #' @section Output:
