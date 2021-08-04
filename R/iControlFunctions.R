@@ -71,3 +71,79 @@ readInfiniteXML <- function(file){
 
   return(list(data = as_tibble(data), parameter = parameter))
 }
+
+
+#' read XML from Tecan Infinity Reader
+#'
+#' reads iControl XML file and returns a tibble
+#'
+#' @param file path to XML file
+#' @section Output:
+#'    \code{list} with data in longform format and parameters
+#' @export
+readInfiniteXML2 <- function(file) {
+  dataXML <- XML::xmlToList(XML::xmlParse(file))
+
+  measurements <- lapply(dataXML[which(names(dataXML) == "Section")], function(section) {
+    attributesSection <- t(as.data.frame(section$.attrs)) %>%
+          as_tibble()
+    data <- lapply(
+      section[which(names(section) == "Data")],
+      function(data) {
+        dataAttributes <- t(as.data.frame(data$.attrs)) %>%
+          as_tibble()
+        measurements <- lapply(
+          data[which(names(data) == "Well")],
+          function(well) {
+            unlist(well)
+          }) %>%
+          bind_rows() %>%
+          bind_cols(dataAttributes)
+        if ("Time_Start" %in% names(measurements)) {
+          measurements <- measurements %>%
+            rename(Time_Start_Inc = Time_Start)
+        }
+        return(measurements)
+      }) %>%
+      bind_rows() %>%
+      bind_cols(attributesSection)
+  })
+  dataDf <- measurements$Section
+
+  # format data
+  rows <- str_sub(dataDf$.attrs.Pos, 1, 1)
+  rows_n <- as.integer(sapply(rows, function(x){
+    which(x == LETTERS)
+  }))
+  cols <- as.integer(str_sub(dataDf$.attrs.Pos, 2))
+  wells <- (rows_n - 1) * max(cols) + cols
+
+  if ("Time_Start_Inc" %in% names(dataDf)) {
+     data <- dataDf %>%
+        transmute(
+          plate = dataXML$Plate$ID,
+          cycle = as.integer(Cycle),
+          tStart = lubridate::as_datetime(Time_Start) + lubridate::as.duration(Time_Start_Inc),
+          name = Name,
+          pos = .attrs.Pos,
+          row = rows,
+          col = cols,
+          well = wells,
+          value = as.numeric(Single.text)
+        )
+  } else {
+    data <- dataDf %>%
+      transmute(
+        plate = dataXML$Plate$ID,
+        cycle =  as.integer(Cycle),
+        tStart = lubridate::as_datetime(Time_Start),
+        name = Name,
+        pos = .attrs.Pos,
+        row = rows,
+        col = cols,
+        well = wells,
+        value = as.numeric(Single.text)
+      )
+  }
+  return(data)
+}

@@ -16,7 +16,8 @@ Depends:
     jpeg,
     rmarkdown,
     knitr,
-    TSP
+    TSP,
+    lubridate
 Import:
 License: file LICENCE
 URL: https://github.com/dcangst/rrobot
