@@ -10,6 +10,7 @@ Description: functions for generating worklists and reading data from reader.
 Depends:
     R (>= 3.3.2),
     xml2,
+    XML,
     jsonlite,
     tidyverse,
     stringr,
