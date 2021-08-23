@@ -23,7 +23,7 @@
 #' @family internal
 .binToDec <- function(x){
   if (length(x[x > 1]) > 0){
-    stop("not a binary number")
+    rlang::abort("not a binary number")
   }
   power <- 2 ^ (rev(seq_along(x)) - 1)
   return(sum(x * power))
@@ -142,11 +142,11 @@ wellsFromANSII <- function(wellSelection){
   } else if (length(volumes) == 8){
     # check for mismatch between selected tips and supplied volumes
     if (sum(tipMask * volumes - volumes) < 0){
-      stop("tipMask / volumes mismatch!")
+      rlang::abort("tipMask / volumes mismatch!")
     }
     volumes12 <- c(volumes, rep(0, 4))
   } else {
-    stop("volumes vector not of length 8 (or 1)")
+    rlang::abort("volumes vector not of length 8 (or 1)")
   }
 
   volumes_str <- vector("character", 12L)
@@ -170,11 +170,11 @@ getGridSite <- function(RackLabel){
     site <- RackLabel_wt$site
   } else if (dim(RackLabel_wt)[1] < 1){
     print(gwl$worktable$worktable)
-    stop(paste0("Racklabel: "), RackLabel,
+    rlang::abort(paste0("Racklabel: "), RackLabel,
       " not defined. Define Racklabels using addToWorktable() or manually @ gwl$worktable")
   } else if (dim(RackLabel_wt)[1] > 1){
     print(gwl$worktable$worktable)
-    stop("Duplicate RackLabels? check worktable")
+    rlang::abort("Duplicate RackLabels? check worktable")
   }
   return(list(site = site, grid = grid))
 }

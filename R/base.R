@@ -183,12 +183,12 @@ addToWorktable <- function(RackLabel = "",
       subset(worktable, RackLabel == labware_add$RackLabel[i]))[1]
 
     if (RackLabel_defined == 1){
-      stop("RackLabel already defined")
+      rlang::abort("RackLabel already defined")
     } else {
       gridSiteCheck <-
         worktable[worktable$grid == grid & worktable$site == site, ]
       if (dim(gridSiteCheck)[1] == 1){
-        stop(paste0("Grid/Site allready occupied by ", gridSiteCheck$RackLabel))
+        rlang::abort(paste0("Grid/Site allready occupied by ", gridSiteCheck$RackLabel))
       }
       worktable <- rbind(worktable, labware_add[i, ])
     }

@@ -91,7 +91,7 @@ readColonies <- function(csv_path,
 
   growth <- unique(growth)
   if (dim(growth)[1] != n_row * n_col) {
-    stop("Data set not complete")
+    rlang::abort("Data set not complete")
   }
 
   output <- list(

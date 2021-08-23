@@ -468,7 +468,7 @@ moveMCA <- function(
       as.vector(matrix(1:384, 24, 16)[c(T, F), c(F, T)]),
       as.vector(matrix(1:384, 24, 16)[c(F, T), c(F, T)]))
   } else {
-    stop("must target a 96 or a 384well plate!")
+    rlang::abort("must target a 96 or a 384well plate!")
   }
   wellSelection_string <- ANSIIFromWells(wellSelection, ncol, nrow)
   GridSite <- getGridSite(RackLabel)
@@ -531,7 +531,7 @@ MCAvector <- function(
   CMadd_warning <- ""
 
   if (site == 0){
-    stop("MCAVector Sites start with 1 (from the back)!!!!")
+    rlang::abort("MCAVector Sites start with 1 (from the back)!!!!")
   }
 
   MCAVector_command <- str_c(
