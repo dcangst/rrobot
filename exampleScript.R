@@ -88,8 +88,8 @@ for (iGroup in pipGroups){
       .groups = "drop"
       )
 
-  if (!all(tipVolumes$volume < 800)){
-    stop("volume too high")
+  if (!all(tipVolumes$volume < 800)) {
+    rlang::abort("volume too high")
   }
 
   # generate the tip mask (boolean vector, 0 = tip not used, 1 = tip used) and the volume mask (volume in ul)
@@ -130,14 +130,14 @@ for (iGroup in pipGroups){
         volume = volAdd,
         well = well,
         .groups = "drop")
-    
+
     # make masks
     masksCol <- generateMasks(tipVolumeCol$tip, tipVolumeCol$volume)
-    
+
     # write dispense command
     adv_dispense(
       tipMask       = masksCol$tip_mask,
-      volumes       = masksCol$vol_mask,
+      volumes       = c(masksCol$vol_mask, 4),
       RackLabel     = "MP3pos_mid",
       wellSelection = tipVolumeCol$well,
       ncol = 12, nrow = 8)
